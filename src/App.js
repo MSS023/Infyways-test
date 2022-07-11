@@ -232,7 +232,7 @@ function App() {
           </div>
         </div>
       )}
-      <div className="footer d-flex justify-content-end p-3">
+      <div className="footer d-flex justify-content-end mb-3 me-3">
         <Button variant="secondary" onClick={() => handleShow("md-down")}>
           SEE HOW
         </Button>
