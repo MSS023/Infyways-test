@@ -8,8 +8,8 @@ export function checkLogin(setLoginStatus, populateApp) {
     window.FB.getLoginStatus(function (response) {
       if (response.status === "connected") {
         token = response.authResponse.accessToken;
-        setLoginStatus(true);
         populateApp(token);
+        setLoginStatus(true);
       }
       else {
         login(setLoginStatus,populateApp);
@@ -26,8 +26,8 @@ export function login(setLoginStatus, populateApp) {
       function (response) {
         if (response.status === "connected") {
           token = response.authResponse.accessToken;
-          setLoginStatus(true);
           populateApp(token);
+          setLoginStatus(true);
         } else {
           throw new Error("Login operation failed");
         }
@@ -45,10 +45,11 @@ export function login(setLoginStatus, populateApp) {
   }
 }
 
-export async function logout(setLoginStatus) {
+export async function logout(setLoginStatus,setLoading) {
   try {
     window.FB.logout(function (response) {
       setLoginStatus(false);
+      setLoading(false);
     });
   } catch (err) {
     throw err;

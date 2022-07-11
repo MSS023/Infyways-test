@@ -81,7 +81,8 @@ function App() {
       setData([]);
       setFollowers(0);
       setImpression(0);
-      logout(setLoginStatus);
+      setLoading(true);
+      logout(setLoginStatus,setLoading);
     } catch (err) {
       console.log(err);
       message.error("Something went wrong");
@@ -105,10 +106,11 @@ function App() {
         count += 1;
       });
       setImpression(Math.round(sum / count));
+      setLoading(false);
     } catch (err) {
-      message.error(err);
+      message.error(err.message);
+      await logout(setLoginStatus,setLoading);
     }
-    setLoading(false);
   }
 
   if (loading) {
