@@ -177,7 +177,7 @@ function App() {
       ) : (
         <div className="h-100 flex-grow-1 flex-column justify-content-center align-items-center landing-container">
           <div className="h-25 min-vh-25 d-flex align-items-center justify-content-center pt-3">
-            <h1 className="impression-text pe-5">Your Overall Impression </h1>{" "}
+            <h1 className="impression-text pe-5">Your Overall Engagement </h1>{" "}
             <Progress
               type="circle"
               percent={impression}
@@ -213,7 +213,7 @@ function App() {
                           </Card.Text>
                         </Card.Body>
                         <Card.Footer className="card-imp">
-                          Impression{" "}
+                          Engagement{" "}
                           <Progress
                             type="circle"
                             width={50}
