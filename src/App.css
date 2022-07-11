@@ -1,38 +1,52 @@
+@import "~antd/dist/antd.css";
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@400;700&display=swap');
+
 .App {
   text-align: center;
+  /* height: 100vh; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.welcome-note {
+  font-family: "Edu VIC WA NT Beginner", cursive;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.brand-name {
+  color: white !important;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1.welcome-note {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+h2.welcome-note {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.impression-text {
+  color: white;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+h1.impression-text {
+  font-size: 3.5rem;
+}
+
+h2.impression-text {
+  font-size: 2rem;
+}
+
+.card-t {
+  font-family: 'Neuton', serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-imp {
+  font-family: 'Neuton', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
